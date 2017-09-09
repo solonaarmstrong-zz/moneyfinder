@@ -1,0 +1,15 @@
+/*
+ ****** List ******
+ */
+ 
+.list {
+	list-style-type: none;
+}
+.list li {
+	text-align: center;
+	padding: 20px 40%;
+	margin: 10px;
+}
+.list li:first-child {
+	background: #ff0000;
+}
