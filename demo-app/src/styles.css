@@ -1,4 +1,44 @@
 /*
+ ****** Global ******
+ */
+
+ body {
+ 	font-size: 16px;
+ }
+
+ /*
+ ****** Header ******
+ */
+
+header {
+	width: 100%;
+	height: 50px;
+	padding: 10px;
+	color: #eaeaea;
+}
+
+
+/*
+ ****** Main ******
+ */
+
+.main {
+	background: #444;
+	color: #eaeaea;
+}
+.main .container {
+	padding-top: 50px;
+}
+
+.col.input .row {
+	background: #cfcfcf;
+	color: #444;
+	padding: 5px;
+	margin: 10px;
+}
+
+
+/*
  ****** List ******
  */
  
@@ -7,9 +47,37 @@
 }
 .list li {
 	text-align: center;
-	padding: 20px 40%;
+	padding: 5px;
 	margin: 10px;
 }
 .list li:first-child {
-	background: #ff0000;
+	background: #b92701;
 }
+.list li:last-child {
+	background: #759407;
+}
+
+
+/*
+ ****** Custom classes ******
+ */
+
+ input[type=text] {
+	border-radius: 4px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+ }
+
+
+/*
+ ****** Custom classes ******
+ */
+
+ .center {
+ 	text-align: center;
+ }
+ .rounded {
+	border-radius: 4px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+ }
