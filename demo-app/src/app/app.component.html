@@ -6,8 +6,8 @@
 
 <section class="main">
 	<div class="container">
-		<div class="row justify-content-start">
-			<div class="col">
+		<div class="row result justify-content-start">
+			<div class="col .col-sm-12 .col-md-12 .col-lg-6 .col-xl-6">
 				<div class="row" ng-app="list">
 					<ul class="list">
 						<li class="rounded" *ngFor = "let item of data.content">
@@ -16,16 +16,35 @@
 					</ul>
 				</div>
 			</div>
-			<div class="col input">
-				<div class="row rounded">
-					<div class="col">
-						<input type="text" name="new-item">
+
+			<div class="input rounded col .col-sm-12 .col-md-12 .col-lg-6 .col-xl-6">
+				<div class="row">
+					<div class="col-8">
+						<input type="text" name="new-item" #newItem
+							(keyup.enter)="addItem(newItem.value); addCustomContent(newItem.value); newItem.value=''">
 					</div>
+					<div class="col-4">
+						<div class="button"
+							(click)="addItem(newItem.value); newItem.value=''">Add</div>
+					</div>
+				</div>
+
+				<div class="row">
 					<div class="col">
-						<input type="submit">
+						<input type="checkbox" name="filter"> Display Filter
+					</div>
+				</div>
+
+				<div class="row" id="custom-content">
+					<div class="col">
+						<div></div>
 					</div>
 				</div>
 			</div>
 		</div>
+	</div>
+
+	<div class="container center">
+		<a href="https://en.wikipedia.org/wiki/The_Simpsons" target="_blank" class="button">The Simpsons</a>
 	</div>
 </section>

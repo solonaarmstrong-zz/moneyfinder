@@ -12,8 +12,30 @@ export class AppComponent {
 	title = 'UI Web Developer Programming Test';
 	author = 'Solona';
 	data;
+	additionalItems = [];
+
 	constructor(private http:Http) {
 		this.http.get('assets/list-data.json')
 		.subscribe(res => this.data = res.json());
+	}
+
+	constructor() {
+		this.data = [];
+	}
+
+	addItem(value) {
+		if (value !== '') {
+			this.data.content.push({
+				data: value
+			});
+		}
+	}
+
+	addCustomContent(value) {
+		if (value != '') {
+			this.additionalItems.push({
+				data: value
+			});
+		}
 	}
 }

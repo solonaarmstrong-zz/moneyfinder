@@ -5,6 +5,27 @@
  body {
  	font-size: 16px;
  }
+ a, a:link, a:visited {
+ 	color: #eaeaea;
+ }
+ a:hover, a:active {
+ 	color: #ececec;
+ 	text-decoration: none;
+ }
+ .button {
+ 	color: #eaeaea;
+ 	background: #222;
+ 	padding: 5px 10px;
+	border-radius: 4px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	cursor: pointer;
+	text-align: center;
+ 	height: 35px;
+ }
+ .button:hover {
+ 	background: #000;
+ }
 
  /*
  ****** Header ******
@@ -15,6 +36,7 @@ header {
 	height: 50px;
 	padding: 10px;
 	color: #eaeaea;
+	background: #222;
 }
 
 
@@ -31,10 +53,23 @@ header {
 }
 
 .col.input .row {
-	background: #cfcfcf;
+	margin-bottom: 50px;
+}
+.col.input {
+	background: #efefef;
+	box-shadow: 5px 1px 10px 0px #222;
 	color: #444;
-	padding: 5px;
-	margin: 10px;
+	padding: 15px;
+	margin: 20px;
+	height: auto;
+}
+
+#custom-content .col div {
+	background: #cfcfcf;
+	padding: 15px;
+	border-radius: 4px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
 }
 
 
@@ -47,8 +82,9 @@ header {
 }
 .list li {
 	text-align: center;
-	padding: 5px;
-	margin: 10px;
+	padding: 10px 5px;
+	margin: 20px;
+	box-shadow: 5px 1px 10px 0px #222;
 }
 .list li:first-child {
 	background: #b92701;
@@ -59,13 +95,18 @@ header {
 
 
 /*
- ****** Custom classes ******
+ ****** Inputs ******
  */
 
- input[type=text] {
+input {
 	border-radius: 4px;
 	-webkit-border-radius: 4px;
 	-moz-border-radius: 4px;
+}
+ input[type=text] {
+ 	padding: 5px 10px;
+	width: 100%;
+ 	height: 35px;
  }
 
 
@@ -81,3 +122,15 @@ header {
 	-webkit-border-radius: 4px;
 	-moz-border-radius: 4px;
  }
+
+
+ /*
+ ****** Media queries ******
+ */
+
+
+@media only screen and (min-width: 1024px) {
+	#custom-content {	
+		display: none;
+	}
+}
