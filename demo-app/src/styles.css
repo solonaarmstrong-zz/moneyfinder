@@ -1,4 +1,81 @@
 /*
+ ****** Global ******
+ */
+
+ body {
+ 	font-size: 16px;
+ }
+ a, a:link, a:visited {
+ 	color: #eaeaea;
+ }
+ a:hover, a:active {
+ 	color: #ececec;
+ 	text-decoration: none;
+ }
+ .button {
+ 	color: #eaeaea;
+ 	background: #222;
+ 	padding: 5px 10px;
+	border-radius: 4px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	cursor: pointer;
+	text-align: center;
+ 	height: 35px;
+ }
+ .button:hover {
+ 	background: #000;
+ }
+ hr {
+ 	border: 1px solid #555;
+ 	margin-top: 30px;
+ 	margin-bottom: 30px;
+ }
+
+ /*
+ ****** Header ******
+ */
+
+header {
+	width: 100%;
+	height: 50px;
+	padding: 10px;
+	color: #eaeaea;
+	background: #222;
+}
+
+
+/*
+ ****** Main ******
+ */
+
+.main {
+	background: #444;
+	color: #eaeaea;
+}
+.main .container {
+	padding-top: 50px;
+}
+
+.col.input .row {
+	margin-bottom: 50px;
+}
+.col.input {
+	background: #efefef;
+	box-shadow: 5px 1px 10px 0px #222;
+	color: #444;
+	padding: 50px 25px;
+	margin: 20px;
+	height: auto;
+}
+
+.col.link {
+	margin-bottom: 20px;
+}
+
+
+
+/*
  ****** List ******
  */
  
@@ -7,9 +84,70 @@
 }
 .list li {
 	text-align: center;
-	padding: 20px 40%;
-	margin: 10px;
+	padding: 10px;
+	margin: 20px;
+	background: #333;
+	box-shadow: 5px 1px 10px 0px #222;
 }
 .list li:first-child {
-	background: #ff0000;
+	background: #b92701;
+}
+.list li:nth-of-type(2),
+.list li:nth-of-type(3),
+.list li:nth-of-type(5),
+.list li:nth-of-type(8),
+.list li:nth-of-type(13),
+.list li:nth-of-type(21) ,
+.list li:nth-of-type(34),
+.list li:nth-of-type(55) {
+	background: #a38200;
+	background: -moz-linear-gradient(-45deg,  #ccb559 5%, #a38200 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(-45deg,  #ccb559 5%,#a38200 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(135deg,  #ccb559 5%,#a38200 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ccb559', endColorstr='#a38200',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+.list li:last-child {
+	background: #759407;
+}
+
+
+/*
+ ****** Inputs ******
+ */
+
+input {
+	border-radius: 4px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+}
+input[type=text] {
+	padding: 5px 10px;
+	width: 100%;
+	height: 35px;
+}
+
+
+/*
+ ****** Custom classes ******
+ */
+
+ .center {
+ 	text-align: center;
+ }
+ .rounded {
+	border-radius: 4px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+ }
+
+
+ /*
+ ****** Media queries ******
+ */
+
+
+@media only screen and (min-width: 1024px) {
+	#custom-content {	
+		display: none;
+	}
 }

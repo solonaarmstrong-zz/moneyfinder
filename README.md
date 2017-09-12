@@ -7,7 +7,8 @@
 
 ## Quick start
 
-Instructions...
+-1 Enter something in the input box. 
+-2 Click 'Add' and your content will be added to the list
 
 ## Author
 
