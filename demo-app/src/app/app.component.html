@@ -1,21 +1,66 @@
-<div class="container">
-	<div class="jumbotron">
-		<h2>{{ author }}'s {{ title }}</h2>
+<header>
+	<div class="center">
+		<h4>{{ author }}'s {{ title }}</h4>
 	</div>
+</header>
 
-	<div class="row justify-content-start">
-		<div class="col">
-			<div class="row">
-				<ul class="list">
-					<li>List Item 1</li>
-				</ul>
+<section class="main">
+	<div class="container">
+		<div class="row result justify-content-start">
+			<div class="col .col-sm-12 .col-md-12 .col-lg-6 .col-xl-6">
+				<div class="row" ng-app="list">
+					<ul class="list">
+						<li class="rounded"
+							*ngFor="let item of data.content">
+								{{ item.data }}
+						</li>
+						<li class="rounded" 
+							*ngFor="let item of this.filtered">
+								{{ item.data }}
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="input rounded col .col-sm-12 .col-md-12 .col-lg-6 .col-xl-6">
+				<div class="row">
+					<div class="col-8">
+						<input type="text" name="new-item" #newItem
+							(keyup.enter)="addItem(newItem.value); addCustomItem(newItem.value); newItem.value=''">
+					</div>
+					<div class="col-4">
+						<div class="button"
+							(click)="addItem(newItem.value); addCustomItem(newItem.value); newItem.value=''">Add</div>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col">
+						<input type="checkbox" name="filter" #filter
+							(click)="filterItems($event)"> Display Filter
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col">
+						<div>
+							<ul>
+								<li class="rounded" *ngFor="let item of custom.content">
+									{{ item.data }}
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
-		<div class="col">
-			<div class="row">
-				
+
+		<hr>
+
+		<div class="row">
+			<div class="col center link">
+				 <a href="https://en.wikipedia.org/wiki/The_Simpsons" target="_blank" class="button">The Simpsons</a>
 			</div>
 		</div>
 	</div>
-</div>
-
+</section>
