@@ -10,8 +10,13 @@
 			<div class="col .col-sm-12 .col-md-12 .col-lg-6 .col-xl-6">
 				<div class="row" ng-app="list">
 					<ul class="list">
-						<li class="rounded" *ngFor = "let item of data.content">
-							{{ item.data }}
+						<li class="rounded"
+							*ngFor="let item of data.content">
+								{{ item.data }}
+						</li>
+						<li class="rounded" 
+							*ngFor="let item of this.filtered">
+								{{ item.data }}
 						</li>
 					</ul>
 				</div>
@@ -21,30 +26,41 @@
 				<div class="row">
 					<div class="col-8">
 						<input type="text" name="new-item" #newItem
-							(keyup.enter)="addItem(newItem.value); addCustomContent(newItem.value); newItem.value=''">
+							(keyup.enter)="addItem(newItem.value); addCustomItem(newItem.value); newItem.value=''">
 					</div>
 					<div class="col-4">
 						<div class="button"
-							(click)="addItem(newItem.value); newItem.value=''">Add</div>
+							(click)="addItem(newItem.value); addCustomItem(newItem.value); newItem.value=''">Add</div>
 					</div>
 				</div>
 
 				<div class="row">
 					<div class="col">
-						<input type="checkbox" name="filter"> Display Filter
+						<input type="checkbox" name="filter" #filter
+							(click)="filterItems($event)"> Display Filter
 					</div>
 				</div>
 
-				<div class="row" id="custom-content">
+				<div class="row">
 					<div class="col">
-						<div></div>
+						<div>
+							<ul>
+								<li class="rounded" *ngFor="let item of custom.content">
+									{{ item.data }}
+								</li>
+							</ul>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-	</div>
 
-	<div class="container center">
-		<a href="https://en.wikipedia.org/wiki/The_Simpsons" target="_blank" class="button">The Simpsons</a>
+		<hr>
+
+		<div class="row">
+			<div class="col center link">
+				 <a href="https://en.wikipedia.org/wiki/The_Simpsons" target="_blank" class="button">The Simpsons</a>
+			</div>
+		</div>
 	</div>
 </section>

@@ -26,6 +26,11 @@
  .button:hover {
  	background: #000;
  }
+ hr {
+ 	border: 1px solid #555;
+ 	margin-top: 30px;
+ 	margin-bottom: 30px;
+ }
 
  /*
  ****** Header ******
@@ -59,18 +64,15 @@ header {
 	background: #efefef;
 	box-shadow: 5px 1px 10px 0px #222;
 	color: #444;
-	padding: 15px;
+	padding: 50px 25px;
 	margin: 20px;
 	height: auto;
 }
 
-#custom-content .col div {
-	background: #cfcfcf;
-	padding: 15px;
-	border-radius: 4px;
-	-webkit-border-radius: 4px;
-	-moz-border-radius: 4px;
+.col.link {
+	margin-bottom: 20px;
 }
+
 
 
 /*
@@ -82,12 +84,27 @@ header {
 }
 .list li {
 	text-align: center;
-	padding: 10px 5px;
+	padding: 10px;
 	margin: 20px;
+	background: #333;
 	box-shadow: 5px 1px 10px 0px #222;
 }
 .list li:first-child {
 	background: #b92701;
+}
+.list li:nth-of-type(2),
+.list li:nth-of-type(3),
+.list li:nth-of-type(5),
+.list li:nth-of-type(8),
+.list li:nth-of-type(13),
+.list li:nth-of-type(21) ,
+.list li:nth-of-type(34),
+.list li:nth-of-type(55) {
+	background: #a38200;
+	background: -moz-linear-gradient(-45deg,  #ccb559 5%, #a38200 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(-45deg,  #ccb559 5%,#a38200 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(135deg,  #ccb559 5%,#a38200 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ccb559', endColorstr='#a38200',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 }
 .list li:last-child {
 	background: #759407;
@@ -103,11 +120,11 @@ input {
 	-webkit-border-radius: 4px;
 	-moz-border-radius: 4px;
 }
- input[type=text] {
- 	padding: 5px 10px;
+input[type=text] {
+	padding: 5px 10px;
 	width: 100%;
- 	height: 35px;
- }
+	height: 35px;
+}
 
 
 /*
